@@ -96,6 +96,36 @@
     footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); }
     footer .socials { margin: 0 0 1rem; }
     .tiny { font-size: .95rem; opacity: .8; }
+    .featured-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.featured-video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 0;
+  border-radius: 22px;
+  background: #000;
+}
+
+.featured-info {
+  padding: 1rem;
+}
+
+.featured-info h3 {
+  margin: 0 0 .5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+}
+
+.featured-info p {
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
     @media (max-width: 760px) {
       .hero { min-height: auto; padding-top: 2rem; }
       section { padding: 3.5rem 0; }
@@ -105,6 +135,14 @@
       .music-card { min-height: 155px; }
       .section-head { align-items: start; }
       .itch-wrap iframe { width: 560px; max-width: none; }
+      .featured-card {
+  grid-template-columns: 1fr;
+}
+
+.featured-video {
+  width: min(100%, 360px);
+  margin: 0 auto;
+}
     }
   </style>
 </head>
